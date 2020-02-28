@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>test.jmqtt.io</title>
+    <title>JMQTT - 免费的MQTT测试服务器/Broker</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="//cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
-<h1>
+<h1 style="margin-top: 20px">
     <img src="imgs/logo.png" width="120">
 </h1>
+<div class="container" style="text-align: center">
+    <code style="font-size: 26px;">tcp://test.jmqtt.io:1883</code>
+</div>
 <div id="left">
     <h2>JMQTT</h2>
     <p> &nbsp;&nbsp;&nbsp;&nbsp; test.jmqtt.io 是一个免费的测试mqtt服务器(broker).它依托开源hivemq社区版本程序.MQTT是一个非常轻量级的协议,
@@ -16,9 +20,10 @@
         主要用于物联控制命令下发,以及物联网设备数据上报.也有部分平台把它用在直播弹幕系统中.
     </p>
 
-    <p>关于MQTT更多信息, 查看 <a
-            href="http://mqtt.org/">http://mqtt.org/</a> 或者 <a
-            href="https://hivemq.com">HiveMQ</a>.</p>
+    <p>关于MQTT更多信息, 查看
+        <a href="http://mqtt.org/">http://mqtt.org/</a> 或者
+        <a href="https://github.com/hivemq/hivemq-community-edition">HiveMQ</a>.
+    </p>
 
     <h2>MQTT服务器</h2>
     <p>该服务器提供mqtt和websocket支持,主要监听端口如下:</p>
@@ -45,10 +50,10 @@
     <h2>MQTT 客户端</h2>
     <ul>
         <li>
-            <a href="https://www.eclipse.org/paho/clients/c">c sdk</a>
+            <a href="https://www.eclipse.org/paho/clients/c">C SDK</a>
         </li>
         <li>
-            <a href="eclipse.org/paho/">java sdk</a>
+            <a href="https://eclipse.org/paho/">JAVA SDK</a>
         </li>
     </ul>
 </div>
@@ -56,6 +61,8 @@
     <div class="text">版权 © 2019 - 2020 JMQTT Operating Company, LLC.保留所有权利。</div>
 </footer>
 </body>
-<script src="//cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
-<script type="text/javascript"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="//cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="//cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
