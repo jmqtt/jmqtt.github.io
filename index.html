@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test.jmqtt.io</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<h1>
+    <img src="imgs/logo.png" width="120">
+</h1>
+<div id="left">
+    <h2>JMQTT</h2>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp; test.jmqtt.io 是一个免费的测试mqtt服务器(broker).它依托开源hivemq社区版本程序.MQTT是一个非常轻量级的协议,
+        它使用发布/订阅模型.这使得它非常适合于"设备到设备"的消息传递,如低功耗传感器或移动设备.
+        主要用于物联控制命令下发,以及物联网设备数据上报.也有部分平台把它用在直播弹幕系统中.
+    </p>
+
+    <p>关于MQTT更多信息, 查看 <a
+            href="http://mqtt.org/">http://mqtt.org/</a> 或者 <a
+            href="https://hivemq.com">HiveMQ</a>.</p>
+
+    <h2>MQTT服务器</h2>
+    <p>该服务器提供mqtt和websocket支持,主要监听端口如下:</p>
+    <ul>
+        <li>1883 : MQTT,未加密</li>
+        <li>8883 : MQTT,使用TLS加密</li>
+        <li>8884 : MQTT,使用客户端证书加密(不推荐使用)</li>
+        <li>8080 : websocket支持MQTT,未加密</li>
+        <li>8081 : websocket支持MQTT,使用TLS加密</li>
+    </ul>
+    <p>您可以免费使用，但请不要滥用或作为生产服务器来使用。如果需要生产环境中使用,你应该建立和部署自己的mqtt服务器</p>
+    <p>请不要发发布任何敏感和有价值的信息，任何人都有可能在订阅该topic。</p>
+</div>
+
+<div id="right">
+    <h2>注意事项</h2>
+    <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;该服务器也是我自己测试所用。这意味着它将经常运行未发布或实验性的代码，
+        可能不像您希望的那样稳定。有时候在进行检测内存使用情况或者并发测试,有可能会导致服务器运行缓慢。
+        但是大部分时间都是保证服务可用和服务器运行稳定。
+    </p>
+
+    <h2>MQTT 客户端</h2>
+    <ul>
+        <li>
+            <a href="https://www.eclipse.org/paho/clients/c">c sdk</a>
+        </li>
+        <li>
+            <a href="eclipse.org/paho/">java sdk</a>
+        </li>
+    </ul>
+</div>
+<footer class="footer">
+    <div class="text">版权 © 2019 - 2020 JMQTT Operating Company, LLC.保留所有权利。</div>
+</footer>
+</body>
+<script src="//cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+<script type="text/javascript"></script>
+</html>
