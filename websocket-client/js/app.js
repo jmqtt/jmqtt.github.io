@@ -39,7 +39,7 @@ var websocketclient = {
         var lwMessage = $('#LWMInput').val();
         var ssl = $('#sslInput').is(':checked');
 
-        this.client = new Messaging.Client(host, port, clientId);
+        this.client = new Paho.MQTT.Client(host, port, clientId);
         this.client.onConnectionLost = this.onConnectionLost;
         this.client.onMessageArrived = this.onMessageArrived;
 
@@ -136,12 +136,7 @@ var websocketclient = {
             websocketclient.render.showError("Not connected");
             return false;
         }
-
-        var message = new Messaging.Message(payload);
-        message.destinationName = topic;
-        message.qos = qos;
-        message.retained = retain;
-        this.client.send(message);
+        this.client.send(topic, payload, Number(qos), retain);
     },
 
     'subscribe': function (topic, qosNr, color) {
